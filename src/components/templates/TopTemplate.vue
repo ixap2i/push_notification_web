@@ -1,24 +1,30 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-import TopTemplate from './components/templates/TopTemplate.vue'
-
+import Header from '../organisms/Header.vue'
+import Hero from '../organisms/Hero.vue'
+import Title from '../atoms/Title.vue'
 export default {
+  props: {
+    title: String,
+    hasSubTitle: Boolean,
+    isBigFont: Boolean,
+    subTitle: String,
+  },
   components: {
-    TopTemplate
+    Header, Hero, Title
   }
 }
 </script>
 
 <template>
-  <TopTemplate />
+  <Header />
+  <Hero />
+  <!-- <Title /> -->
+  <Title title="HOGEHOGE" isBigFont="true" hasSubtitle="true" subTitle="hogeeee" />
   <RouterView />
 </template>
 
 <style scoped>
-body {
-  background: #F1ECC3;
-}
-
 header {
   line-height: 1.5;
   max-height: 100vh;
