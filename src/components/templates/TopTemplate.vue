@@ -1,28 +1,12 @@
-<script>
-import { RouterLink, RouterView } from 'vue-router'
-import Header from '../organisms/Header.vue'
-import Hero from '../organisms/Hero.vue'
-import Title from '../atoms/Title.vue'
-export default {
-  props: {
-    title: String,
-    hasSubTitle: Boolean,
-    isBigFont: Boolean,
-    subTitle: String,
-  },
-  components: {
-    Header, Hero, Title
-  }
-}
-</script>
 
 <template>
-  <Header />
-  <Hero />
-  <!-- <Title /> -->
-  <Title title="HOGEHOGE" isBigFont="true" hasSubtitle="true" subTitle="hogeeee" />
   <RouterView />
 </template>
+
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+
+</script>
 
 <style scoped>
 header {

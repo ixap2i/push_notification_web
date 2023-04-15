@@ -1,16 +1,16 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-import TopTemplate from './components/templates/TopTemplate.vue'
+import HomeView from '@/views/HomeView.vue'
 
 export default {
   components: {
-    TopTemplate
+    HomeView
   }
 }
 </script>
 
 <template>
-  <TopTemplate />
+  <HomeView />
   <RouterView />
 </template>
 
