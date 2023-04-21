@@ -1,9 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import Push from 'push.js'
-
-Push.create('Hello World!')
 </script>
 
 <template>
