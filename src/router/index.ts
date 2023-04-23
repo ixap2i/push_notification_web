@@ -1,4 +1,5 @@
 import TopTemplate from '@/components/templates/TopTemplate.vue'
+import Notfound from "@/components/templates/Notfound.vue"
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -16,7 +17,11 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
-    }
+    },
+    // will match everything and put it under `$route.params.pathMatch`
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: Notfound },
+    // will match anything starting with `/user-` and put it under `$route.params.afterUser`
+    // { path: '/user-:afterUser(.*)', component: UserGeneric },
   ]
 })
 
