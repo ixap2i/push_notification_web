@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
-    "preview": "vite preview",
+    "build": "run-p type-check build-only && vite build",
+    "preview": "vite preview --port 8000",
     "test:unit": "vitest --environment jsdom --root src/",
     "test:e2e": "playwright test",
     "build-only": "vite build",
@@ -19,7 +19,8 @@
     "sass": "^1.56.1",
     "sass-resources-loader": "^2.2.5",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "wrangler": "^2.17.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",
