@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useCounterStore } from "@/stores/counter";
+import { useCounterStore } from "../stores/counter";
 import Push from 'push.js'
 
 const counter = useCounterStore();

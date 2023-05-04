@@ -1,5 +1,5 @@
-import TopTemplate from '@/components/templates/TopTemplate.vue'
-import Notfound from "@/components/templates/Notfound.vue"
+import TopTemplate from '../components/templates/TopTemplate.vue'
+import Notfound from "../components/templates/Notfound.vue"
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
